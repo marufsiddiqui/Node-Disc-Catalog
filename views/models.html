@@ -1,0 +1,7 @@
+<ol>
+  <li ng-repeat="model in models">
+    <a ui-sref="modelslist({modelName:model.name})">
+      {{ model.name }} - ({{ model.count }})
+    </a>
+  </li>
+</ol>

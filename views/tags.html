@@ -1,0 +1,7 @@
+<ol>
+  <li ng-repeat="tag in tags">
+    <a ui-sref="tagslist({tagName:tag.name})">
+      {{ tag.name }} - ({{ tag.count }})
+    </a>
+  </li>
+</ol>

@@ -1,0 +1,16 @@
+{
+  "name": "nw-timer",
+  "version": "0.0.1",
+  "main": "index.html",
+  "description": "Timer application.",
+  "window": {
+    "title": "Filex",
+    "width": 960,
+    "height": 720,
+    "toolbar": true,
+    "frame": true
+  },
+  "dependencies": {
+    "nedb": "~0.9.3"
+  }
+}

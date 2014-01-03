@@ -1,0 +1,22 @@
+<ol>
+  <li ng-repeat="item in items">
+    <div class="vid320thumb">
+      <div class="img_container " style="display: none"><a href="movieindex.php?id={{ item.externalId }}&amp;"><img
+        src="{{ item.poster }}" border="0">
+
+        <div class="shadow"></div>
+      </a></div>
+      <div class="info">
+        <div class="titlerow">
+          <div class="title">{{ item.title }}</div>
+          <div class="date">{{ item.aired }}</div>
+          <div class="rating">{{ item.rating }}</div>
+          <div class="favs">{{ item.favs }}</div>
+          <div class="comments">{{ item.comments }}</div>
+          <div style="clear:both"></div>
+        </div>
+        <div class="featuring">Featuring <a ui-sref="modelslist({modelName:model})" ng-repeat="model in item.models">{{ model }} </a></div>
+      </div>
+    </div>
+  </li>
+</ol>
