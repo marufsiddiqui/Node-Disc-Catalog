@@ -1,6 +1,6 @@
 var _ = require('./node_modules/nedb/node_modules/underscore');
-
-angular.module('filex', ['ui.router', 'ngResource'])
+var rd = require('./filelisting');
+angular.module('filex', ['ui.router', 'ngResource', 'angularTreeview'])
   .factory('Data', function ($q) {
     function _getData() {
       var deferred = $q.defer();
@@ -81,9 +81,10 @@ angular.module('filex', ['ui.router', 'ngResource'])
         url: "/",
         templateUrl: "views/list.html",
         controller: function ($scope, Data) {
-          Data.getData().then(function (data) {
+          /*Data.getData().then(function (data) {
             $scope.items = data.clips;
-          });
+          });*/
+          a = $scope.dirs = [rd.readdirSyncRecursive("D:\\furam\\eXe")];
         }
       })
       .state('tags', {
