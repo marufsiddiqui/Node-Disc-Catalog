@@ -1,5 +1,5 @@
 var _ = require('./node_modules/nedb/node_modules/underscore');
-var rd = require('./filelisting');
+var rd = require('./app/filelisting');
 angular.module('filex', ['ui.router', 'ngResource', 'angularTreeview'])
   .factory('Data', function ($q) {
     function _getData() {
